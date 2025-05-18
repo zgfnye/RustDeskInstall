@@ -173,7 +173,7 @@ cd /opt/rustdesk/ || exit 1
 
 
 #Download latest version of Rustdesk
-RDLATEST=$(curl https://gh-proxy.zgfnye.ggff.net/https://api.github.com/repos/rustdesk/rustdesk-server/releases/latest -s | grep "tag_name" | awk -F'"' '{print $4}')
+RDLATEST=$(curl https://api.github.com/repos/rustdesk/rustdesk-server/releases/latest -s | grep "tag_name" | awk -F'"' '{print $4}')
 
 echo "Installing Rustdesk Server"
 if [ "${ARCH}" = "x86_64" ] ; then
